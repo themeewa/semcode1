@@ -1,0 +1,13 @@
+./DeepRecommender/run.py --gpu_ids 0 \
+    --path_to_train_data data_utils/NF_TRAIN/nf.train.txt\
+    --path_to_eval_data data_utils/NF_VALID/nf.valid.txt \
+    --hidden_layers 512,512,1024 \
+    --non_linearity_type selu \
+    --batch_size 128 \
+    --logdir model_save \
+    --drop_prob 0.8 \
+    --optimizer momentum \
+    --lr 0.005 \
+    --weight_decay 0 \
+    --aug_step 1 \
+    --num_epochs 10
